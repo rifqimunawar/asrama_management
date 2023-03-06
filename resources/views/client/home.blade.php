@@ -12,7 +12,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url({{ asset('storage/img/asrama1.jpeg' ) }});">
+          <div class="carousel-item active" style="background-image: url({{ asset('storage/img/asrama2.jpeg' ) }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Asrama Puteri Baiturrahman</span></h2>
@@ -47,4 +47,4 @@
     </div>
   </section><!-- End Hero -->
 
-@endsection
+  @endsection

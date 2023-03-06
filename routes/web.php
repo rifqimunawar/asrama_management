@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\GaleriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,21 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('client.home');
-});
+// Route::get('/', function () {
+//     return view('client.home');
+// });
+
+// ==============================================================
+// Route Home 
+// ==============================================================
 Route::get('/', [HomeController::class, 'index'])->name('index');
+
+// ==============================================================
+// Route About
+// ==============================================================
+Route::get('/about', [AboutController::class, 'index'])->name('index');
+
+// ==============================================================
+// Route Galeri
+// ==============================================================
+Route::get('/galeri', [GaleriController::class, 'index'])->name('index');

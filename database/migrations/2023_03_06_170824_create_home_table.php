@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('deskripsi', 55)->nullable();
             $table->string('img', 35)->nullable();
             $table->string('link', 40)->nullable();
+            $table->string('thumnail_about', 40)->nullable();
+            $table->string('link_about', 40)->nullable();
+            $table->string('about', 40)->nullable();
             $table->timestamps();
         });
     }
