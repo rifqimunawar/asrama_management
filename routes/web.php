@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GaleriController;
 
 /*
@@ -34,3 +36,18 @@ Route::get('/about', [AboutController::class, 'index'])->name('index');
 // Route Galeri
 // ==============================================================
 Route::get('/galeri', [GaleriController::class, 'index'])->name('index');
+
+// ==============================================================
+// Route Team
+// ==============================================================
+Route::get('/team', [TeamController::class, 'index'])->name('index');
+
+// ==============================================================
+// Route Admin
+// ==============================================================
+Route::get('/admin', [AdminController::class, 'index'])->name('index');
+// ==============================================================
+// Route Admin Home Edit
+// ==============================================================
+Route::get('/admin/home', [HomeController::class, 'list'])->name('list');
+
