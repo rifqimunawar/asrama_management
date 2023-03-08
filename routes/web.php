@@ -18,9 +18,9 @@ use App\Http\Controllers\GaleriController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('client.home');
-// });
+Route::get('/admin/hero', function () {
+    return view('admin.hero');
+});
 
 // ==============================================================
 // Route Home 

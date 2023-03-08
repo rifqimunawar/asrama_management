@@ -10,6 +10,6 @@ class AboutController extends Controller
     public function index(Request $request)
     {
         $about=About::all();
-        return view('client.about', compact('about'));
+        return view('client.home', compact('about'));
     }
 }

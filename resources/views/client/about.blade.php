@@ -74,11 +74,5 @@
 
     </div>
   </section><!-- End Counts Section -->
-
-
-
-
-
-
 </main><!-- End #main -->
 @endsection

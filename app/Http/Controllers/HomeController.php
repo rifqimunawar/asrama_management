@@ -12,4 +12,9 @@ class HomeController extends Controller
         $home = Home::all();
         return view('client.home', compact('home'));
     }
+    public function list(Request $request)
+    {
+        $list=Home ::latest()->get();
+        return view('admin.home', compact('list'));
+    }
 }
