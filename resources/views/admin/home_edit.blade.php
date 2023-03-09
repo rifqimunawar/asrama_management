@@ -1,5 +1,5 @@
-@section('title') {{ 'Home' }}@endsection
-@extends('admin.app')
+@section('title') {{ 'Edit Home' }}@endsection
+@extends('/admin/app')
 @section('content')
   <div class="container">
     
@@ -17,10 +17,30 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <form action="" method="post">
+                <form action="/admin/home_index/{{ $edit->id }}" method="post" enctype="multipart/form-data">
+                    @method('put')
+                    @csrf 
                     <div class="my-3">
                         <label for="judul">Judul</label><br>
-                        <input type="textarea" name="alamat" class="form-control" id="alamat" class="mb-3" value="{{ "judul" }}" id="alamat"/>
+                        <input type="textarea" name="judul" class="form-control" id="judul" class="mb-3" value="{{ $edit->judul }}" id="alamat"/>
+                    </div>
+                    <div class="my-3">
+                        <label for="deskripsi">Deskripsi</label><br>
+                        <input type="textarea" name="deskripsi" class="form-control" id="deskripsi" class="mb-3" value="{{ $edit->deskripsi }}" id="deskripsi"/>
+                    </div>
+                    <div class="my-3">
+                        <label for="link">Link</label><br>
+                        <input type="textarea" name="link" class="form-control" id="link" class="mb-3" value="{{ $edit->link }}" id="link"/>
+                    </div>
+                    <div class="my-3">
+                        <label for="img">Gambar Saat Ini</label><br>
+                        <img src="{{ asset('storage/img/'.$edit['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 100px">
+                    </div>
+                    <div class="my-3">
+                        <a href="/adminhome" class="btn btn-warning" >Kembali</a>
+                    </div>
+                    <div class="my-3 mx-3">
+                        <button type="submit" class="btn btn-success">Update</button>
                     </div>
                 </form>
             </div>

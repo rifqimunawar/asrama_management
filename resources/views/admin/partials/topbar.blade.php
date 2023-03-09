@@ -28,7 +28,6 @@
                                   Logout
                           </a>
                       </li>
-
                   </ul>
 
               </nav>

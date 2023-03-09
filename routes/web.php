@@ -50,5 +50,6 @@ Route::get('/admin', [AdminController::class, 'index'])->name('index');
 // Route Admin Home Edit
 // ==============================================================
 Route::get('/adminhome', [HomeController::class, 'list'])->name('list');
-Route::get('/{id}/adminhomeedit', [HomeController::class, 'edit'])->name('edit');
+Route::get('/adminhome/{id}/adminhomeedit', [HomeController::class, 'edit'])->name('edit');
+Route::put('/adminhome/{id}', [HomeController::class, 'update'])->name('update');
 
