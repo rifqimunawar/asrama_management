@@ -15,6 +15,11 @@ class HomeController extends Controller
     public function list(Request $request)
     {
         $list=Home ::latest()->get();
-        return view('admin.home', compact('list'));
+        return view('admin.home_index', compact('list'));
+    }
+    public function edit($id)
+    {
+        $list=Home ::findOrFail($id);
+        return view('admin.home_edit', compact('list'));
     }
 }

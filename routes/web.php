@@ -18,9 +18,9 @@ use App\Http\Controllers\GaleriController;
 |
 */
 
-Route::get('/admin/hero', function () {
-    return view('admin.hero');
-});
+// Route::get('/adminhomeedit', function () {
+//     return view('admin.home_edit');
+// });
 
 // ==============================================================
 // Route Home 
@@ -49,5 +49,6 @@ Route::get('/admin', [AdminController::class, 'index'])->name('index');
 // ==============================================================
 // Route Admin Home Edit
 // ==============================================================
-Route::get('/admin/home', [HomeController::class, 'list'])->name('list');
+Route::get('/adminhome', [HomeController::class, 'list'])->name('list');
+Route::get('/{id}/adminhomeedit', [HomeController::class, 'edit'])->name('edit');
 

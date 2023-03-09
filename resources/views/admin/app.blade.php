@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>@yield('title') | Dashboard</title>
 
     <!-- Custom fonts -->
     <link href="vendoradmin/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,10 +27,10 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-  @include('admin.layouts.partials.navbar')
-  @include('admin.layouts.partials.topbar')
+  @include('admin.partials.navbar')
+  @include('admin.partials.topbar')
   @yield('content')
-  @include('admin.layouts.partials.footer')
+  @include('admin.partials.footer')
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
