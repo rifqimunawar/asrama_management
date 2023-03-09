@@ -45,10 +45,10 @@ class HomeController extends Controller
             $newFileName = 'profile' . '_' . $request->nama . '-' . now()->timestamp . '.' . $extension;
             // $request->img->move(public_path() . '/uploads/' . $newFileName);
             $request->file('img')->storeAs('/img', $newFileName);
-            $home['photo'] = $newFileName;
+            $home['img'] = $newFileName;
             $home->update();
         }
-        return redirect('/admin/home/');
+        return view('/adminhome', compact('home'));
     }
 
 
