@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         AboutSeeder::class,
         GaleriSeeder::class,
         TeamSeeder::class,
+        ContactSeeder::class,
         ]);
     }
 }

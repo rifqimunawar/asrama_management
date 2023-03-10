@@ -6,6 +6,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ use App\Http\Controllers\GaleriController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/galeri', [GaleriController::class, 'index'])->name('index');
 Route::get('/team', [TeamController::class, 'index'])->name('index');
+Route::get('/contact', [ContactController::class, 'index'])->name('index');
+Route::post('/contact/store', [ContactController ::class, 'store'])->name('store');
 // ==============================================================
 // Route Admin
 // ==============================================================
@@ -53,3 +56,6 @@ Route::post('/admin/team/store', [TeamController ::class, 'store'])->name('store
 Route::get('/admin/team/{id}/edit', [TeamController ::class, 'edit'])->name('edit');
 Route::put('/admin/team/{id}', [TeamController ::class, 'update'])->name('update');
 Route::delete('/admin/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
+// Route Admin Message Edit
+Route::get('/admin/contact', [ContactController ::class, 'list'])->name('list');
+Route::delete('/admin/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');

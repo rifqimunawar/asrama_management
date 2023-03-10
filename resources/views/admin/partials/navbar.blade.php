@@ -58,6 +58,13 @@
                 <i class="fas fa-fw fa-users"></i>
                 <span>Team</span></a>
         </li>
+          
+          <!-- Nav Item - Team -->
+          <li class="nav-item {{ '/admin/team' ==request()->path()? 'active' :''}}">
+            <a class="nav-link" href="/admin/contact">
+                <i class="fas fa-fw fa-comment"></i>
+                <span>Pesan</span></a>
+        </li>
 
           <!-- Nav Item - Utilities Collapse Menu -->
           <li class="nav-item">
