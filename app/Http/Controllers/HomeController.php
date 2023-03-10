@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Home;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -56,6 +57,6 @@ class HomeController extends Controller
             $home['img'] = $newFileName;
             $home->update();
         }
-        return redirect( view('/admin/home/'));
+        return redirect('/admin/home/');
     }
 }

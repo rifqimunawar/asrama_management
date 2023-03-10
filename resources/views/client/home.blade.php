@@ -47,6 +47,4 @@
     </div>
   </section><!-- End Hero -->
 
-  percobaan push anjay
-
   @endsection
