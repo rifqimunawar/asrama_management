@@ -1,57 +1,57 @@
 @section('title') {{ 'Edit Home' }}@endsection
-@extends('/admin/app')
+@extends('admin.app')
 @section('content')
-  <div class="container">
-    
-  <!-- Begin Page Content -->
-  <div class="container-fluid">
+<div class="container">
 
-    <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Edit Home</h1>
-    <p class="mb-4"></p>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
 
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Edit Gambar Home</h6>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <form action="/admin/home_index/{{ $edit->id }}" method="post" enctype="multipart/form-data">
-                    @method('put')
-                    @csrf 
-                    <div class="my-3">
-                        <label for="judul">Judul</label><br>
-                        <input type="textarea" name="judul" class="form-control" id="judul" class="mb-3" value="{{ $edit->judul }}" id="alamat"/>
-                    </div>
-                    <div class="my-3">
-                        <label for="deskripsi">Deskripsi</label><br>
-                        <input type="textarea" name="deskripsi" class="form-control" id="deskripsi" class="mb-3" value="{{ $edit->deskripsi }}" id="deskripsi"/>
-                    </div>
-                    <div class="my-3">
-                        <label for="link">Link</label><br>
-                        <input type="textarea" name="link" class="form-control" id="link" class="mb-3" value="{{ $edit->link }}" id="link"/>
-                    </div>
-                    <div class="my-3">
-                        <label for="img">Gambar Saat Ini</label><br>
-                        <img src="{{ asset('storage/img/'.$edit['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 100px">
-                    </div>
-                    <div class="my-3">
-                        <a href="/adminhome" class="btn btn-warning" >Kembali</a>
-                    </div>
-                    <div class="my-3 mx-3">
-                        <button type="submit" class="btn btn-success">Update</button>
-                    </div>
-                </form>
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Edit Home</h1>
+        <p class="mb-4"></p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Edit Gambar Home</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <form action="/admin/home_index/{{ $edit->id }}" method="post" enctype="multipart/form-data">
+                        @method('put')
+                        @csrf
+                        <div class="my-3">
+                            <label for="judul">Judul</label><br>
+                            <input type="textarea" name="judul" class="form-control" id="judul" class="mb-3" value="{{ $edit->judul }}" id="alamat" />
+                        </div>
+                        <div class="my-3">
+                            <label for="deskripsi">Deskripsi</label><br>
+                            <input type="textarea" name="deskripsi" class="form-control" id="deskripsi" class="mb-3" value="{{ $edit->deskripsi }}" id="deskripsi" />
+                        </div>
+                        <div class="my-3">
+                            <label for="link">Link</label><br>
+                            <input type="textarea" name="link" class="form-control" id="link" class="mb-3" value="{{ $edit->link }}" id="link" />
+                        </div>
+                        <div class="my-3">
+                            <label for="img">Gambar Saat Ini</label><br>
+                            <img src="{{ asset('storage/img/'.$edit['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 100px">
+                        </div>
+                        <div class="my-3">
+                            <a href="/adminhome" class="btn btn-warning">Kembali</a>
+                        </div>
+                        <div class="my-3 mx-3">
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
-<!-- /.container-fluid -->
+    </div>
+    <!-- /.container-fluid -->
 
 </div>
 <!-- End of Main Content -->
 
-  </div>
-    @endsection
+</div>
+@endsection

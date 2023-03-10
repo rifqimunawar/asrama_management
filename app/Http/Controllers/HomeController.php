@@ -17,7 +17,7 @@ class HomeController extends Controller
     }
     public function list(Request $request)
     {
-        $list=Home ::latest()->get();
+        $list = Home::latest()->get();
         return view('admin.home_index', compact('list'));
     }
     /**
@@ -28,8 +28,8 @@ class HomeController extends Controller
      */
     public function edit($id, Request $request)
     {
-        $edit=Home ::find($id);
-        return view('/admin/home_edit', compact('edit'));
+        $edit = Home::find($id);
+        return view('admin.home_edit', compact('edit'));
     }
 
     public function update($id, Request $request)
@@ -50,7 +50,4 @@ class HomeController extends Controller
         }
         return view('/adminhome', compact('home'));
     }
-
-
-
 }
