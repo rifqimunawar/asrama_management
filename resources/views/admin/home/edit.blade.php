@@ -17,7 +17,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <form action="/admin/home_index/{{ $edit->id }}" method="post" enctype="multipart/form-data">
+                    <form action="/admin/home/{{ $edit->id }}/ " method="post" enctype="multipart/form-data">
                         @method('put')
                         @csrf
                         <div class="my-3">
@@ -34,10 +34,22 @@
                         </div>
                         <div class="my-3">
                             <label for="img">Gambar Saat Ini</label><br>
-                            <img src="{{ asset('storage/img/'.$edit['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 100px">
+                            <img src="{{ asset('storage/img/'.$edit['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 300px">
                         </div>
+                        
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01" value="{{ $edit->img }}"  >
+                              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                          </div>
                         <div class="my-3">
-                            <a href="/adminhome" class="btn btn-warning">Kembali</a>
+                            <a href="/admin/home" class="btn btn-warning">Kembali</a>
                         </div>
                         <div class="my-3 mx-3">
                             <button type="submit" class="btn btn-success">Update</button>

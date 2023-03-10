@@ -38,7 +38,7 @@
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Setting Komponen:</h6>
-                      <a class="collapse-item" href="/adminhome">Home</a>
+                      <a class="collapse-item" href="/admin/home">Home</a>
                       <a class="collapse-item" href="cards.html">About</a>
                   </div>
               </div>

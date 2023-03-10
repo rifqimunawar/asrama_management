@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Home;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * Summary of HomeController
@@ -18,7 +19,7 @@ class HomeController extends Controller
     public function list(Request $request)
     {
         $list = Home::latest()->get();
-        return view('admin.home_index', compact('list'));
+        return view('admin.home.index', compact('list'));
     }
     /**
      * Summary of edit
@@ -29,25 +30,32 @@ class HomeController extends Controller
     public function edit($id, Request $request)
     {
         $edit = Home::find($id);
-        return view('admin.home_edit', compact('edit'));
+        return view('admin.home.edit', compact('edit'));
     }
 
     public function update($id, Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'link' => 'required',
+            'photo' => 'required', 'simtimes|image:gif,png,jpg,jpeg '
+        ]);
+
         $home = Home::find($id);
         $home->judul = $request->judul;
         $home->deskripsi = $request->deskripsi;
         $home->link = $request->link;
 
+
         $home->update();
         if ($request->img) {
             $extension = $request->img->getClientOriginalExtension();
             $newFileName = 'profile' . '_' . $request->nama . '-' . now()->timestamp . '.' . $extension;
-            // $request->img->move(public_path() . '/uploads/' . $newFileName);
             $request->file('img')->storeAs('/img', $newFileName);
             $home['img'] = $newFileName;
             $home->update();
         }
-        return view('/adminhome', compact('home'));
+        return redirect( view('/admin/home/'));
     }
 }

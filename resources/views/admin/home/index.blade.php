@@ -37,7 +37,7 @@
                             <img src="{{ asset('storage/img/'.$lis['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 60px">
                         </td>
                         <td class="text-center">
-                            <a href="/adminhome/{{ $lis->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="/admin/home/{{ $lis->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
                         </td>
                     </tr>
                     @endforeach

@@ -49,7 +49,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('index');
 // ==============================================================
 // Route Admin Home Edit
 // ==============================================================
-Route::get('/adminhome', [HomeController::class, 'list'])->name('list');
-Route::get('/adminhome/{id}/edit', [HomeController::class, 'edit'])->name('edit');
-Route::put('/adminhome/{id}', [HomeController::class, 'update'])->name('update');
+Route::get('/admin/home', [HomeController::class, 'list'])->name('list');
+Route::get('/admin/home/{id}/edit', [HomeController::class, 'edit'])->name('edit');
+Route::put('/admin/home/{id}', [HomeController::class, 'update'])->name('update');
 
