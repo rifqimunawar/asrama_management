@@ -3,9 +3,8 @@
 @section('content')
   
   
-<main id="main">
+{{-- <main id="main">
 
-  <!-- ======= About Us Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
 
@@ -29,10 +28,9 @@
 
 
     </div>
-  </section><!-- End About Us Section -->
+  </section>
 
   
-  <!-- ======= Counts Section ======= -->
   <section class="counts section-bg">
     <div class="container">
 
@@ -73,6 +71,6 @@
       </div>
 
     </div>
-  </section><!-- End Counts Section -->
-</main><!-- End #main -->
-@endsection
+  </section>
+</main>
+@endsection --}}

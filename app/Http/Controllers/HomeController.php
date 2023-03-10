@@ -20,6 +20,7 @@ class HomeController extends Controller
         return view('client.home', compact('home', 'about'));
     }
     
+
     public function list(Request $request)
     {
         $list = Home::latest()->get();
