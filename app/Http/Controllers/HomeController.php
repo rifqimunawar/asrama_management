@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Home;
+use App\Models\About;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -14,9 +15,11 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
+        $about=About::all();
         $home = Home::all();
-        return view('client.home', compact('home'));
+        return view('client.home', compact('home', 'about'));
     }
+    
     public function list(Request $request)
     {
         $list = Home::latest()->get();

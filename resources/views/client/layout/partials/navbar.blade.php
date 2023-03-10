@@ -12,7 +12,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto {{ '/' ==request()->path()? 'active' :''}}" href="/">Home</a></li>
-          <li><a class="nav-link scrollto {{ 'about' ==request()->path()? 'active' :''}} " href="/about">About</a></li>
+          <li><a class="nav-link scrollto {{ 'about' ==request()->path()? 'active' :''}} " href="#about">About</a></li>
           <li><a class="nav-link scrollto {{ 'services' ==request()->path()? 'active' :''}} " href="#services">Services</a></li>
           <li><a class="nav-link scrollto {{ 'galeri' ==request()->path()? 'active' :''}}" href="/galeri">Galeri</a></li>
           <li><a class="nav-link scrollto {{ 'team' ==request()->path()? 'active' :''}} " href="/team">Team</a></li>

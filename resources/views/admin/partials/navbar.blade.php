@@ -51,6 +51,13 @@
                 <i class="fas fa-fw fa-images"></i>
                 <span>Galeri</span></a>
         </li>
+          
+          <!-- Nav Item - Team -->
+          <li class="nav-item {{ '/admin/team' ==request()->path()? 'active' :''}}">
+            <a class="nav-link" href="/admin/team">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Team</span></a>
+        </li>
 
           <!-- Nav Item - Utilities Collapse Menu -->
           <li class="nav-item">

@@ -26,7 +26,6 @@ use App\Http\Controllers\GaleriController;
 // Route Client
 // ==============================================================
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/about', [AboutController::class, 'index'])->name('index');
 Route::get('/galeri', [GaleriController::class, 'index'])->name('index');
 Route::get('/team', [TeamController::class, 'index'])->name('index');
 // ==============================================================
@@ -40,10 +39,17 @@ Route::put('/admin/home/{id}', [HomeController::class, 'update'])->name('update'
 // Route Admin About Edit
 Route::get('/admin/about/{id}/edit', [AboutController::class,'edit'])->name('edit');
 Route::put('/admin/about/{id}', [AboutController::class,'update'])->name('update');
-// Route Admin About Edit
+// Route Admin Galeri Edit
 Route::get('/admin/galeri', [GaleriController ::class, 'list'])->name('list');
 Route::get('/admin/galeri/create', [GaleriController ::class, 'create'])->name('create');
 Route::post('/admin/galeri/store', [GaleriController ::class, 'store'])->name('store');
 Route::get('/admin/galeri/{id}/edit', [GaleriController ::class, 'edit'])->name('edit');
 Route::put('/admin/galeri/{id}', [GaleriController ::class, 'update'])->name('update');
 Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
+// Route Admin Team Edit
+Route::get('/admin/team', [TeamController ::class, 'list'])->name('list');
+Route::get('/admin/team/create', [TeamController ::class, 'create'])->name('create');
+Route::post('/admin/team/store', [TeamController ::class, 'store'])->name('store');
+Route::get('/admin/team/{id}/edit', [TeamController ::class, 'edit'])->name('edit');
+Route::put('/admin/team/{id}', [TeamController ::class, 'update'])->name('update');
+Route::delete('/admin/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');

@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Validator;
 
 class AboutController extends Controller
 {
-    public function index(Request $request)
-    {
-        $about=About::all();
-        return view('client.about', compact('about'));
-    }
     public function edit($id, Request $request)
     {
         $edit=About::find($id);
