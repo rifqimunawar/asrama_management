@@ -23,33 +23,20 @@ use App\Http\Controllers\GaleriController;
 // });
 
 // ==============================================================
-// Route Home 
+// Route Client
 // ==============================================================
 Route::get('/', [HomeController::class, 'index'])->name('index');
-
-// ==============================================================
-// Route About
-// ==============================================================
 Route::get('/about', [AboutController::class, 'index'])->name('index');
-
-// ==============================================================
-// Route Galeri
-// ==============================================================
 Route::get('/galeri', [GaleriController::class, 'index'])->name('index');
-
-// ==============================================================
-// Route Team
-// ==============================================================
 Route::get('/team', [TeamController::class, 'index'])->name('index');
-
 // ==============================================================
 // Route Admin
 // ==============================================================
 Route::get('/admin', [AdminController::class, 'index'])->name('index');
-// ==============================================================
 // Route Admin Home Edit
-// ==============================================================
 Route::get('/admin/home', [HomeController::class, 'list'])->name('list');
 Route::get('/admin/home/{id}/edit', [HomeController::class, 'edit'])->name('edit');
 Route::put('/admin/home/{id}', [HomeController::class, 'update'])->name('update');
-
+// Route Admin About Edit
+Route::get('/admin/about/{id}/edit', [AboutController::class,'edit'])->name('edit');
+Route::put('/admin/about/{id}', [AboutController::class,'update'])->name('update');

@@ -12,7 +12,7 @@
       @foreach ($about as $bout)
       <div class="row no-gutters">
         <div class="col-lg-6 video-box">
-          <img src="{{ asset('storage/img/' . $bout['thumnail']) }}" class="img-fluid" alt="">
+          <img src="{{ asset('storage/img/' . $bout['img']) }}" class="img-fluid" alt="">
           <a href="{{ $bout['link'] }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
         </div>
 

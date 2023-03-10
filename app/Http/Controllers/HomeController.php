@@ -40,7 +40,7 @@ class HomeController extends Controller
             'judul' => 'required',
             'deskripsi' => 'required',
             'link' => 'required',
-            'photo' => 'required', 'simtimes|image:gif,png,jpg,jpeg '
+            'img' => 'required', 'simtimes|image:gif,png,jpg,jpeg '
         ]);
 
         $home = Home::find($id);
@@ -52,7 +52,7 @@ class HomeController extends Controller
         $home->update();
         if ($request->img) {
             $extension = $request->img->getClientOriginalExtension();
-            $newFileName = 'profile' . '_' . $request->nama . '-' . now()->timestamp . '.' . $extension;
+            $newFileName = 'home' . '_' . $request->nama . '-' . now()->timestamp . '.' . $extension;
             $request->file('img')->storeAs('/img', $newFileName);
             $home['img'] = $newFileName;
             $home->update();
