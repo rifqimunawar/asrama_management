@@ -14,7 +14,7 @@
           <hr class="sidebar-divider my-0">
 
           <!-- Nav Item - Dashboard -->
-          <li class="nav-item active">
+          <li class="nav-item {{ 'admin' ==request()->path()? 'active' :''}}">
               <a class="nav-link" href="/admin">
                   <i class="fas fa-fw fa-tachometer-alt"></i>
                   <span>Dashboard</span></a>
@@ -29,7 +29,7 @@
           </div>
 
           <!-- Nav Item - Pages Collapse Menu -->
-          <li class="nav-item">
+          <li class="nav-item {{ '/admin/home' ==request()->path()? 'active' :''}}">
               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                   aria-expanded="true" aria-controls="collapseTwo">
                   <i class="fas fa-fw fa-cog"></i>
@@ -46,7 +46,7 @@
 
           
           <!-- Nav Item - Galeri -->
-          <li class="nav-item">
+          <li class="nav-item {{ '/admin/galeri' ==request()->path()? 'active' :''}}">
             <a class="nav-link" href="/admin/galeri">
                 <i class="fas fa-fw fa-images"></i>
                 <span>Galeri</span></a>
