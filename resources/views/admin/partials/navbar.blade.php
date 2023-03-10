@@ -44,6 +44,14 @@
               </div>
           </li>
 
+          
+          <!-- Nav Item - Galeri -->
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/galeri">
+                <i class="fas fa-fw fa-images"></i>
+                <span>Galeri</span></a>
+        </li>
+
           <!-- Nav Item - Utilities Collapse Menu -->
           <li class="nav-item">
               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"

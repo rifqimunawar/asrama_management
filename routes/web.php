@@ -40,3 +40,10 @@ Route::put('/admin/home/{id}', [HomeController::class, 'update'])->name('update'
 // Route Admin About Edit
 Route::get('/admin/about/{id}/edit', [AboutController::class,'edit'])->name('edit');
 Route::put('/admin/about/{id}', [AboutController::class,'update'])->name('update');
+// Route Admin About Edit
+Route::get('/admin/galeri', [GaleriController ::class, 'list'])->name('list');
+Route::get('/admin/galeri/create', [GaleriController ::class, 'create'])->name('create');
+Route::post('/admin/galeri/store', [GaleriController ::class, 'store'])->name('store');
+Route::get('/admin/galeri/{id}/edit', [GaleriController ::class, 'edit'])->name('edit');
+Route::put('/admin/galeri/{id}', [GaleriController ::class, 'update'])->name('update');
+Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
