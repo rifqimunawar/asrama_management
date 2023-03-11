@@ -6,8 +6,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Our Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
+          <h2>Data Penghuni Kamar</h2>
+          <p></p>
         </div>
 
         <div class="row">

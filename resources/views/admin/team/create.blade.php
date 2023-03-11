@@ -26,7 +26,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Status</label>
+              <label for="exampleFormControlInput1" class="form-label">Pembayaran</label>
               <input type="text" class="form-control" id="exampleFormControlInput1" name="posisi">
             </div>
 

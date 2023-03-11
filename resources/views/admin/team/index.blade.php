@@ -23,7 +23,8 @@
                       <tr>
                         <td class="text-center">No</td>
                         <td class="text-center">Nama</td>
-                        <td class="text-center">Status</td>
+                        <td class="text-center">Nomor Kamar</td>
+                        <td class="text-center">Pembayaran</td>
                         <td class="text-center">Gambar</td>
                         <td class="text-center">Aksi</td>
                     </tr>
