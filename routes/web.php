@@ -19,9 +19,9 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-// Route::get('/adminhomeedit', function () {
-//     return view('admin.home_edit');
-// });
+Route::get('/berita', function () {
+    return view('client.berita');
+});
 
 // ==============================================================
 // Route Client
@@ -29,6 +29,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/galeri', [GaleriController::class, 'index'])->name('index');
 Route::get('/team', [TeamController::class, 'index'])->name('index');
+// Route::get('/berita', [BeritaController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('index');
 Route::post('/contact/store', [ContactController ::class, 'store'])->name('store');
 // ==============================================================
@@ -59,3 +60,10 @@ Route::delete('/admin/team/{id}', [TeamController::class, 'destroy'])->name('tea
 // Route Admin Message Edit
 Route::get('/admin/contact', [ContactController ::class, 'list'])->name('list');
 Route::delete('/admin/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
+// Route Admin Berita Edit
+Route::get('/admin/berita', [BeritaController ::class, 'list'])->name('list');
+Route::get('/admin/berita/create', [BeritaController ::class, 'create'])->name('create');
+Route::post('/admin/berita/store', [BeritaController ::class, 'store'])->name('store');
+Route::get('/admin/berita/{id}/edit', [BeritaController ::class, 'edit'])->name('edit');
+Route::put('/admin/berita/{id}', [BeritaController ::class, 'update'])->name('update');
+Route::delete('/admin/berita/{id}', [BeritaController::class, 'destroy'])->name('team.destroy');

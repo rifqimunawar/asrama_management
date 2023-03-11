@@ -43,17 +43,17 @@
             <form action="/contact/store" method="post">
               @csrf
               <div class="row">
-                <div class="col-lg-6 form-group">
+                <div class="col-lg-6 form-group my-3">
                   <input type="text" name="nama" class="form-control" id="nama" placeholder="Your Name" required>
                 </div>
-                <div class="col-lg-6 form-group">
+                <div class="col-lg-6 form-group my-3">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="text" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-primary my-3" >Send Message</button></div>
             </form>
 
 

@@ -65,6 +65,13 @@
                 <i class="fas fa-fw fa-comment"></i>
                 <span>Pesan</span></a>
         </li>
+          
+          <!-- Nav Item - Team -->
+          <li class="nav-item {{ '/admin/berita' ==request()->path()? 'active' :''}}">
+            <a class="nav-link" href="/admin/berita">
+                <i class="fas fa-fw fa-newspaper"></i>
+                <span>Berita</span></a>
+        </li>
 
           <!-- Nav Item - Utilities Collapse Menu -->
           <li class="nav-item">
