@@ -24,7 +24,6 @@ class DatabaseSeeder extends Seeder
         GaleriSeeder::class,
         TeamSeeder::class,
         ContactSeeder::class,
-        BeritaSeeder::class,
         ]);
     }
 }

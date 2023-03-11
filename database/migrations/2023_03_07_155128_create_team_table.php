@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nama', 100)->nullable();
             $table->string('posisi', 100)->nullable();
+            $table->string('hp', 80)->nullable();
+            $table->string('kampus', 80)->nullable();
+            $table->string('domisili', 80)->nullable();
+            $table->string('pembayaran', 80)->nullable();
             $table->string('img', 100)->nullable();
             $table->timestamps();
         });

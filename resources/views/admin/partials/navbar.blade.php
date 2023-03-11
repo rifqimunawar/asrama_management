@@ -56,7 +56,7 @@
           <li class="nav-item {{ '/admin/team' ==request()->path()? 'active' :''}}">
             <a class="nav-link" href="/admin/team">
                 <i class="fas fa-fw fa-users"></i>
-                <span>Team</span></a>
+                <span>Data Penghuni</span></a>
         </li>
           
           <!-- Nav Item - Team -->

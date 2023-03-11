@@ -15,7 +15,11 @@ class TeamSeeder extends Seeder
     {
         DB::table('team')->insert([
             'nama' => 'prof obi',
-            'posisi' => 'kyai',
+            'posisi' => 'lt 1',
+            'hp' => '8456123',
+            'kampus' => 'uninus',
+            'domisili' => 'bandung',
+            'pembayaran'=>'500.000',
             'img' => 'asrama0.jpeg',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
@@ -23,7 +27,11 @@ class TeamSeeder extends Seeder
         DB::table('team')->insert([
             'nama' => 'habib',
             'posisi' => 'habibullah',
+            'hp' => '8456123',
+            'kampus' => 'uninus',
+            'domisili' => 'bandung',
             'img' => 'asrama10.jpeg',
+            'pembayaran'=>'500.000',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
