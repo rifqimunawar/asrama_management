@@ -68,11 +68,11 @@
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Kampus</label>
-              <input type="number" class="form-control" id="exampleFormControlInput1"  name="kampus">
+              <input type="text" class="form-control" id="exampleFormControlInput1"  name="kampus">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Domisili</label>
-              <input type="number" class="form-control" id="exampleFormControlInput1" name="domisili">
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="domisili">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Pembayaran</label>

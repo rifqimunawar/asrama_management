@@ -19,9 +19,13 @@ class TeamController extends Controller
         return view('client.team', compact('teams'));
     }
 
-    public function list()
+    public function list(Request $request)
     {
-        $list = Team::latest()->get();
+     if ($request->has('search')) {
+      $list = Team::Where('nama','LIKE','%'.$request->search.'%')->get();
+     } else {
+      $list = Team::latest()->get();
+     }
         return view('admin.team.index', compact('list'));
     }
 
@@ -47,6 +51,10 @@ class TeamController extends Controller
         $team = new Team ();
         $team->nama = $request->nama;
         $team->posisi = $request->posisi;
+        $team->hp = $request->hp;
+        $team->kampus = $request->kampus;
+        $team->domisili = $request->domisili;
+        $team->pembayaran = $request->pembayaran;
 
 
         $team->save();
@@ -68,7 +76,7 @@ class TeamController extends Controller
         return view('admin.team.edit', compact('edit'));
     }
 
-    /**
+    /**  
      * Update the specified resource in storage.
      */
 

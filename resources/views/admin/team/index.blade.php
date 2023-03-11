@@ -18,6 +18,13 @@
         <div class="card-body">
           <a href="/admin/team/create" class="btn btn-primary my-3" >Tambah Penghuni</a>
             <div class="table-responsive">
+
+              <div class="mb-3">
+                <form action="/admin/team" method="get">
+                  <input type="search" name="search" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search...">
+                </form>
+              </div>
+
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
