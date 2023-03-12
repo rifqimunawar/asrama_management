@@ -73,6 +73,13 @@
                 <span>Berita</span></a>
         </li>
 
+                  <!-- Nav Item - Team -->
+          <li class="nav-item {{ '/admin/team' ==request()->path()? 'active' :''}}">
+            <a class="nav-link" href="/admin/user">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Data Admin</span></a>
+        </li>
+
           <!-- Nav Item - Utilities Collapse Menu -->
           <li class="nav-item">
               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"

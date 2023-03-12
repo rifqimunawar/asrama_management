@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BeritaController;
@@ -61,6 +62,13 @@ Route::post('/admin/team/store', [TeamController ::class, 'store'])->name('store
 Route::get('/admin/team/{id}/edit', [TeamController ::class, 'edit'])->name('edit')->middleware('auth');
 Route::put('/admin/team/{id}', [TeamController ::class, 'update'])->name('update')->middleware('auth');
 Route::delete('/admin/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy')->middleware('auth');
+// Route Admin Data Admin
+Route::get('/admin/user', [UserController ::class, 'index'])->name('index')->middleware('auth');
+Route::get('/admin/user/create', [UserController ::class, 'create'])->name('create')->middleware('auth');
+Route::post('/admin/user/store', [UserController ::class, 'store'])->name('store')->middleware('auth');
+Route::get('/admin/user/{id}/edit', [UserController ::class, 'edit'])->name('edit')->middleware('auth');
+Route::put('/admin/user/{id}', [UserController ::class, 'update'])->name('update')->middleware('auth');
+Route::delete('/admin/user/{id}', [UserController::class, 'destroy'])->name('user.destroy')->middleware('auth');
 // Route Admin Message Edit
 Route::get('/admin/contact', [ContactController ::class, 'list'])->name('list')->middleware('auth');
 Route::delete('/admin/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy')->middleware('auth');
