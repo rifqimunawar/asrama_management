@@ -23,7 +23,7 @@
                         <td class="text-center">No</td>
                         <td class="text-center">Judul</td>
                         <td>Deskripsi</td>
-                        <td class="text-center">link</td>
+                        {{-- <td class="text-center">link</td> --}}
                         <td class="text-center">Gambar</td>
                         <td class="text-center"> Aksi</td>
                     </tr>
@@ -32,7 +32,7 @@
                         <td class="text-center">{{ $loop->iteration }}</td>
                         <td>{{ $lis['judul'] }}</td>
                         <td>{{ $lis['deskripsi'] }}</td>
-                        <td class="text-center">{{ $lis['link'] }}</td>
+                        {{-- <td class="text-center">{{ $lis['link'] }}</td> --}}
                         <td class="text-center">
                             <img src="{{ asset('storage/img/'.$lis['img']) }}" width="60" class="img-fluid img-thumbnail" style="max-height: 60px">
                         </td>

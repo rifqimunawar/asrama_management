@@ -28,10 +28,10 @@
                             <label for="deskripsi">Deskripsi</label><br>
                             <input type="textarea" name="deskripsi" class="form-control" id="deskripsi" class="mb-3" value="{{ $edit->deskripsi }}" id="deskripsi" />
                         </div>
-                        <div class="my-3">
+                        {{-- <div class="my-3">
                             <label for="link">Link</label><br>
                             <input type="textarea" name="link" class="form-control" id="link" class="mb-3" value="{{ $edit->link }}" id="link" />
-                        </div>
+                        </div> --}}
                         <div class="my-3">
                             <label for="img">Gambar Saat Ini</label><br>
                             <img src="{{ asset('storage/img/'.$edit['img']) }}" width="300" class="img-fluid img-thumbnail" style="max-height: 300px">

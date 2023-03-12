@@ -29,7 +29,7 @@
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">{{ $hero['judul'] }}</h2>
                 <p class="animate__animated animate__fadeInUp">{{ $hero['deskripsi'] }}</p>
-                <a href="{{ $hero['link'] }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <a href="/login" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
               </div>
             </div>
           </div>

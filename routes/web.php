@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutController;
@@ -20,10 +21,6 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-// Route::get('/berita', function () {
-//     return view('client.berita');
-// });
-
 // ==============================================================
 // Route Client
 // ==============================================================
@@ -34,30 +31,36 @@ Route::get('/berita', [BeritaController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('index');
 Route::post('/contact/store', [ContactController ::class, 'store'])->name('store');
 // ==============================================================
+// Route Login
+// ==============================================================
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+// ==============================================================
 // Route Admin
 // ==============================================================
-Route::get('/admin', [AdminController::class, 'index'])->name('index');
-// Route Admin Home Edit
-Route::get('/admin/home', [HomeController::class, 'list'])->name('list');
-Route::get('/admin/home/{id}/edit', [HomeController::class, 'edit'])->name('edit');
-Route::put('/admin/home/{id}', [HomeController::class, 'update'])->name('update');
+Route::get('/admin', [AdminController::class, 'index'])->name('index')->middleware('auth');
+// Route Admin Home Edit0
+Route::get('/admin/home', [HomeController::class, 'list'])->name('list')->middleware('auth');
+Route::get('/admin/home/{id}/edit', [HomeController::class, 'edit'])->name('edit')->middleware('auth');
+Route::put('/admin/home/{id}', [HomeController::class, 'update'])->name('update')->middleware('auth');
 // Route Admin About Edit
-Route::get('/admin/about/{id}/edit', [AboutController::class,'edit'])->name('edit');
-Route::put('/admin/about/{id}', [AboutController::class,'update'])->name('update');
+Route::get('/admin/about/{id}/edit', [AboutController::class,'edit'])->name('edit')->middleware('auth');
+Route::put('/admin/about/{id}', [AboutController::class,'update'])->name('update')->middleware('auth');
 // Route Admin Galeri Edit
-Route::get('/admin/galeri', [GaleriController ::class, 'list'])->name('list');
-Route::get('/admin/galeri/create', [GaleriController ::class, 'create'])->name('create');
-Route::post('/admin/galeri/store', [GaleriController ::class, 'store'])->name('store');
-Route::get('/admin/galeri/{id}/edit', [GaleriController ::class, 'edit'])->name('edit');
-Route::put('/admin/galeri/{id}', [GaleriController ::class, 'update'])->name('update');
-Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
+Route::get('/admin/galeri', [GaleriController ::class, 'list'])->name('list')->middleware('auth');
+Route::get('/admin/galeri/create', [GaleriController ::class, 'create'])->name('create')->middleware('auth');
+Route::post('/admin/galeri/store', [GaleriController ::class, 'store'])->name('store')->middleware('auth');
+Route::get('/admin/galeri/{id}/edit', [GaleriController ::class, 'edit'])->name('edit')->middleware('auth');
+Route::put('/admin/galeri/{id}', [GaleriController ::class, 'update'])->name('update')->middleware('auth');
+Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('galeri.destroy')->middleware('auth');
 // Route Admin Team Edit
-Route::get('/admin/team', [TeamController ::class, 'list'])->name('list');
-Route::get('/admin/team/create', [TeamController ::class, 'create'])->name('create');
-Route::post('/admin/team/store', [TeamController ::class, 'store'])->name('store');
-Route::get('/admin/team/{id}/edit', [TeamController ::class, 'edit'])->name('edit');
-Route::put('/admin/team/{id}', [TeamController ::class, 'update'])->name('update');
-Route::delete('/admin/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
+Route::get('/admin/team', [TeamController ::class, 'list'])->name('list')->middleware('auth');
+Route::get('/admin/team/create', [TeamController ::class, 'create'])->name('create')->middleware('auth');
+Route::post('/admin/team/store', [TeamController ::class, 'store'])->name('store')->middleware('auth');
+Route::get('/admin/team/{id}/edit', [TeamController ::class, 'edit'])->name('edit')->middleware('auth');
+Route::put('/admin/team/{id}', [TeamController ::class, 'update'])->name('update')->middleware('auth');
+Route::delete('/admin/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy')->middleware('auth');
 // Route Admin Message Edit
-Route::get('/admin/contact', [ContactController ::class, 'list'])->name('list');
-Route::delete('/admin/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
+Route::get('/admin/contact', [ContactController ::class, 'list'])->name('list')->middleware('auth');
+Route::delete('/admin/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy')->middleware('auth');
