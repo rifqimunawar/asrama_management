@@ -82,35 +82,36 @@
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
-          <div class="count-box">
-            <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Happy Clients</p>
-          </div>
-        </div>
-
+        
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
           <div class="count-box">
             <i class="bi bi-document-folder" style="color: #c042ff;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
+            <span data-purecounter-start="0" data-purecounter-end="30"  data-purecounter-duration="1" class="purecounter"></span>
+            <p>Jumlah Kamar</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+          <div class="count-box">
+            <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $count }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Data Penghuni</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
           <div class="count-box">
             <i class="bi bi-live-support" style="color: #46d1ff;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $keg }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Jumlah Kegiatan</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
           <div class="count-box">
             <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $gal }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Galeri Uploads</p>
           </div>
         </div>
 

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Home;
+use App\Models\Team;
 use App\Models\About;
+use App\Models\Agenda;
+use App\Models\Galeri;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -17,7 +20,10 @@ class HomeController extends Controller
     {
         $about=About::all();
         $home = Home::all();
-        return view('client.home', compact('home', 'about'));
+        $count =Team::count();
+        $gal=Galeri::count();
+        $keg=Agenda::count();
+        return view('client.home', compact('home', 'about', 'count', 'gal','keg'));
     }
     
 

@@ -1,39 +1,36 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	
 	<title>Asrama Baiturrahman</title>
-	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Viga&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-image: url('{{ asset('storage/img/asrama3.jpeg') }}');">
 
 	<div class="overlay"></div>
-	<form action="" method="post" class="box">
+  <form action="/login" method="post" class="box">
     @csrf
-		<div class="header">
+		<div class="header"style="background-image: url('{{ asset('storage/img/asrama3.jpeg') }}');">
 			
 			<p>Selamat Datang di Asrama Puteri Baiturrahman</p>
 			
 		</div>
 		<div class="login-area">
 			<input type="email" name="email" class="username" placeholder="Email">
-			<input type="password" name="password" class="password" placeholder="Password">
-			<input type="submit" value="Login" class="submit"> 
-			<a href="">Forgot Password</a>
-		
+			<input type="password" name="password" class="password" placeholder="Password"><br>
+      <button type="submit" class="submit">Login</button>
 		</div>
-
-	</form>
+  </form>
 
 	
 
 </body> 
-</html> --}}
+</html>
 
-
+{{-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,4 +79,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> --}}
