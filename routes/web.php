@@ -7,6 +7,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\ContactController;
@@ -28,7 +29,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/galeri', [GaleriController::class, 'index'])->name('index');
 Route::get('/team', [TeamController::class, 'index'])->name('index');
-Route::get('/berita', [BeritaController::class, 'index'])->name('index');
+Route::get('/agenda', [AgendaController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('index');
 Route::post('/contact/store', [ContactController ::class, 'store'])->name('store');
 // ==============================================================
@@ -69,6 +70,13 @@ Route::post('/admin/user/store', [UserController ::class, 'store'])->name('store
 Route::get('/admin/user/{id}/edit', [UserController ::class, 'edit'])->name('edit')->middleware('auth');
 Route::put('/admin/user/{id}', [UserController ::class, 'update'])->name('update')->middleware('auth');
 Route::delete('/admin/user/{id}', [UserController::class, 'destroy'])->name('user.destroy')->middleware('auth');
+// Route Admin Agenda Management
+Route::get('/admin/agenda', [AgendaController ::class, 'list'])->name('list')->middleware('auth');
+Route::get('/admin/agenda/create', [AgendaController ::class, 'create'])->name('create')->middleware('auth');
+Route::post('/admin/agenda/store', [AgendaController ::class, 'store'])->name('store')->middleware('auth');
+Route::get('/admin/agenda/{id}/edit', [AgendaController ::class, 'edit'])->name('edit')->middleware('auth');
+Route::put('/admin/agenda/{id}', [AgendaController ::class, 'update'])->name('update')->middleware('auth');
+Route::delete('/admin/agenda/{id}', [AgendaController::class, 'destroy'])->name('agenda.destroy')->middleware('auth');
 // Route Admin Message Edit
 Route::get('/admin/contact', [ContactController ::class, 'list'])->name('list')->middleware('auth');
 Route::delete('/admin/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy')->middleware('auth');

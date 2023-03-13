@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
         GaleriSeeder::class,
         TeamSeeder::class,
         ContactSeeder::class,
-        RoleSeeder::class,
         UserSeeder::class,
+        RoleSeeder::class,
         ]);
     }
 }

@@ -14,7 +14,7 @@
           <li><a class="nav-link scrollto {{ '/' ==request()->path()? 'active' :''}}" href="/">Home</a></li>
           <li><a class="nav-link scrollto {{ 'about' ==request()->path()? 'active' :''}} " href="#about">About</a></li>
           <li><a class="nav-link scrollto {{ 'galeri' ==request()->path()? 'active' :''}}" href="/galeri">Galeri</a></li>
-          <li><a class="nav-link scrollto {{ 'berita' ==request()->path()? 'active' :''}} " href="/berita">Berita</a></li>
+          <li><a class="nav-link scrollto {{ 'berita' ==request()->path()? 'active' :''}} " href="/agenda">Agenda</a></li>
           <li><a class="nav-link scrollto {{ 'team' ==request()->path()? 'active' :''}} " href="/team">Penghuni</a></li>
           {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
