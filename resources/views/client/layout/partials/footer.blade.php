@@ -6,10 +6,10 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Mamba</h3>
+            <h3>Asrama Puteri Baiturrhaman</h3>
             <p>
-              A108 Adam Street <br>
-              NY 535022, USA<br><br>
+              Jl. ->nama jalan <br>
+              alamat kota<br><br>
               <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
